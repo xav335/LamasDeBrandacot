@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml"
+	width="1200"
+	xmlns:tools="com.iconeo.tools.*"
+	xmlns:components="com.iconeo.components.*" 
+	creationComplete="init()" xmlns:actualites="com.iconeo.components.actualites.*"
+	currentStateChange="revenirHautDePage.play([Application.application])" xmlns:vente="com.iconeo.components.vente.*" xmlns:ventelamas="com.iconeo.components.ventelamas.*" xmlns:controls="com.fxcomponents.controls.*">
+
+	<mx:AnimateProperty id="revenirHautDePage" target="Application.application" property="verticalScrollPosition" toValue="0"/>
+	
+	<mx:states>
+		<mx:State name="accueil">
+			<mx:AddChild relativeTo="{corps}" position="lastChild">
+				<components:Accueil changerPage="{currentState=event.nouvellePage}"/>
+			</mx:AddChild>
+		</mx:State>
+		
+		<mx:State name="actualite">
+			<mx:AddChild relativeTo="{corps}" position="lastChild">
+				<actualites:CorpsActualite urlFlux="http://www.elevagelama.com/xmlNews.php"/>
+			</mx:AddChild>
+		</mx:State>
+
+		<mx:State name="ferme">
+			<mx:AddChild relativeTo="{corps}" position="lastChild">
+				<components:CorpsFerme/>
+			</mx:AddChild>
+		</mx:State>
+
+		<mx:State name="lama">
+			<mx:AddChild relativeTo="{corps}" position="lastChild">
+				<components:CorpsLamas/>
+			</mx:AddChild>
+		</mx:State>
+
+		<mx:State name="gardien">
+			<mx:AddChild relativeTo="{corps}" position="lastChild">
+				<components:CorpsGardien/>
+			</mx:AddChild>
+		</mx:State>
+
+		<mx:State name="decouverte">
+			<mx:AddChild relativeTo="{corps}" position="lastChild">
+				<components:CorpsVisite/>
+			</mx:AddChild>
+		</mx:State>
+
+		<mx:State name="contact">
+			<mx:AddChild relativeTo="{corps}" position="lastChild">
+				<components:Contact id="contact"/>
+			</mx:AddChild>
+		</mx:State>
+
+		<mx:State name="vente">
+			<mx:AddChild relativeTo="{corps}" position="lastChild">
+				<ventelamas:CorpsVenteLama urlFlux="http://www.elevagelama.com/xmlVentes.php"/>
+			</mx:AddChild>
+		</mx:State>
+
+		<mx:State name="partenaires">
+			<mx:AddChild relativeTo="{corps}" position="lastChild">
+				<components:CorpsPartenaires urlFlux="http://www.elevagelama.com/xmlLiens.php"/>
+			</mx:AddChild>
+		</mx:State>
+
+	</mx:states>
+	
+	<mx:Canvas x="150" y="28" width="204" height="179" backgroundAlpha="0"
+			useHandCursor="true" buttonMode="true" mouseChildren="false"
+			click="currentState='accueil'"/>
+	
+	<mx:Image source="../assets/bouton_contact.png" x="906" y="79"
+			useHandCursor="true" buttonMode="true" mouseChildren="false"
+			click="currentState='contact'"/>
+	
+	<mx:VBox y="215" verticalGap="0"
+		width="100%">
+
+		<components:Menu changerPage="{currentState=event.nouvellePage}"/>
+
+		<mx:Spacer height="-5"/>
+
+		<mx:VBox id="corps"
+			width="100%"
+			horizontalAlign="center"/>
+		
+		<mx:HBox height="32" width="100%" backgroundColor="#675548" paddingTop="5">
+			<mx:Text styleName="texteCorps" width="100%" textAlign="center">
+				<mx:htmlText>
+<![CDATA[Florence et Joël Planteur - 3 les bois de Lafont, 33390 SAINT PAUL - Tél. 05.57.42.20.61 et 06.20.89.70.15 - GPS : Lat 45.15056901 Long -0.57588100 - réalisation <u><a href="http://www.iconeo.fr" target="_blank">Iconeo</a></u>]]>
+				</mx:htmlText>
+			</mx:Text>
+		</mx:HBox>
+
+	</mx:VBox>
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.core.Application;
+			import mx.managers.BrowserManager;
+			import mx.managers.IBrowserManager;
+			import mx.events.StateChangeEvent;
+			import mx.events.BrowserChangeEvent;
+			import com.iconeo.events.NavigationEvent;
+
+			private var bm:IBrowserManager;
+			
+			public function init():void {
+				//Gestion de l'historique
+	            bm = BrowserManager.getInstance();
+	
+	            bm.addEventListener(BrowserChangeEvent.BROWSER_URL_CHANGE, onUrlChange);
+	
+	            bm.init("", "LES LAMAS DE BRANDACOT");
+	            bm.setTitle("LES LAMAS DE BRANDACOT");
+	            
+	            this.addEventListener(StateChangeEvent.CURRENT_STATE_CHANGE, onStateChange);
+	            if(currentState==null){
+	            	trace("forcing");
+	            	currentState = "accueil";
+	            } else {
+	            	trace("pas de forcing. State=" + currentState);
+	            }
+			}
+			
+	        public function onUrlChange(evt:BrowserChangeEvent):void {
+        		var fragment:String = bm.fragment;
+        		var page:String = fragment.substr(fragment.indexOf("=")+1, fragment.length);
+	        	currentState = page;
+	        }
+	        
+	        private function onStateChange(evt:StateChangeEvent):void {
+        		bm.setFragment('page=' + currentState);
+	        }
+    		
+			
+			private function handleNavigationEvent(e:NavigationEvent):void {
+				currentState = e.nouvellePage;
+			}
+			
+		]]>
+	</mx:Script>
+</mx:Canvas>

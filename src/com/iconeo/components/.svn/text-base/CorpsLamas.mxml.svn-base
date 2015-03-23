@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml"
+	width="1200" height="100%"
+	verticalScrollPolicy="off"
+	verticalGap="0" xmlns:components="com.iconeo.components.*"
+	horizontalAlign="center" xmlns:tools="com.iconeo.tools.*"
+	backgroundColor="#624B3B" xmlns:controls="com.fxcomponents.controls.*">
+	<mx:VBox width="900"
+		horizontalAlign="center">
+		
+		<mx:Spacer height="50"/>
+		<mx:Text styleName="texteEdito"
+					text="LE LAMA EST UN CAMÉLIDÉ"/>
+		<mx:Text styleName="texteCorps" width="100%">
+			<mx:htmlText>
+				<![CDATA[Originaire de l’Amérique du sud, le lama ainsi que les trois autres espèces, Alpaga, Guanaco et vigogne sont ce que l’on appelle des petits camélidés. Ils sont cousins des grands camélidés, le chameau de Bactriane (deux bosses) et du dromadaire (une bosse) qui ont migré il y a 4 à 5 millions d’années en Asie et en Afrique.
+
+Certains éleveurs français et européens s’intéressent et s’investissent dans l’élevage des petits camélidés. Aujourd’hui le cheptel européen compte plusieurs milliers de lamas et d’alpagas avec toujours la volonté des éleveurs professionnels d’importer des animaux de qualité, principalement du Chili.
+				]]>
+			</mx:htmlText>
+		</mx:Text>
+		<mx:Image source="../assets/Affichage-Les-camelides.png"/>
+		<mx:Text styleName="texteEdito"
+					text="CONDITION DE DÉTENTION – SA CLASSIFICATION"/>
+		<mx:Text styleName="texteCorps" width="100%">
+			<mx:htmlText>
+				<![CDATA[Le lama, tout comme l’alpaga est un animal domestique reconnu d’utilité agricole par le Ministère de l’Agriculture. Il n’est donc pas soumis à quelconque autorisation de détention. Mammifère herbivore qui rumine, les scientifiques ont classé le camélidé dans l’Ordre des Artiodactyles, sous-ordre Tylopodes. (Source : Docteur Murray E. Folwair)]]>
+			</mx:htmlText>
+		</mx:Text>
+		<mx:Image source="../assets/Affichage-Classification.png"/>
+		<mx:Text styleName="texteEdito"
+					text="POURQUOI DES LAMAS ?"/>
+		<mx:Text styleName="texteCorps" width="100%">
+			<mx:htmlText>
+				<![CDATA[Connus pour ses nombreuses caractéristiques, le lama est :
+	- excellent débroussailleur
+	- animal de bât, docile pour les randonnées
+	- éventuel producteur de laine selon sa toison
+	- animal gracieux pour l’agrément
+	- Gardien de troupeau (moutons)
+
+On peu citer la pratique de zoothérapie par certains éleveurs ainsi que la participation de concours nationaux ou européens.]]>
+			</mx:htmlText>
+		</mx:Text>
+		<mx:Image source="../assets/Affichage-fonctions-lamas.png"/>
+		
+		<mx:Text styleName="texteEdito"
+					text="COMPORTEMENT DU LAMA :"/>
+		<mx:Text styleName="texteCorps" width="100%">
+			<mx:htmlText>
+				<![CDATA[Très sociable, le lama aime vivre en troupeau avec une vie grégaire très structurée. Curieux de nature il appréciera les sorties en randonnée et les visites de son éleveur. Bien élevé et manipulé au départ (conduite particulière), il ne crachera pas sur son propriétaire et lui donnera toute satisfaction.]]>
+			</mx:htmlText>
+		</mx:Text>
+		<mx:Text styleName="texteEdito"
+					text="ASPECT PHYSIQUE"/>
+		<mx:Text styleName="texteCorps" width="100%">
+			<mx:htmlText>
+				<![CDATA[<b>Le lama est le plus grand des camélidés sud américains.</b>
+<b>Durée de vie : </b>une vingtaine d’années
+<b>Hauteur : </b>entre 1m et 1,20 au garrot
+<b>Couleur de la toison : </b>blanc, beige, brun, noir, gris, avec variabilité jusqu’à 24 coloris.
+<b>Poids : </b>entre 90 et 230 kg
+<b>Gestation : </b>350 jours en moyenne
+<b>Cria : </b>nom donné au petit lama qui pèse entre 9 et 17 kg à la naissance. Peut être sevré à partir de 6 mois.
+<b>Chargement à l’hectare : </b>0,45 U.G.B. (Unité Gros Bétail).]]>
+			</mx:htmlText>
+		</mx:Text>
+	</mx:VBox>
+	
+	
+	
+</mx:VBox>

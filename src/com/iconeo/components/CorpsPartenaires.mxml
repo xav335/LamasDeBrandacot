@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml"
+	width="900"
+	backgroundAlpha="0"
+	xmlns:tools="com.iconeo.tools.*" xmlns:ventelamas="com.iconeo.components.ventelamas.*">
+	<mx:HBox width="100%">
+		<mx:VBox id="colonne1" width="50%">
+			<mx:VBox id="noLabelBox" verticalGap="0" width="100%"/>
+			<mx:Text styleName="texteMenu" text="Tourisme"/>
+			<mx:VBox name="tourisme" verticalGap="0" width="100%"/>
+			<mx:Text styleName="texteMenu" text="Campings"/>
+			<mx:VBox name="camping" verticalGap="0" width="100%"/>
+			<mx:Text styleName="texteMenu" text="Hôtellerie - restaurants"/>
+			<mx:VBox name="hotelresto" verticalGap="0" width="100%"/>
+		</mx:VBox>
+
+		<mx:VBox id="colonne2" width="50%">
+			<mx:Text styleName="texteMenu" text="Chambres d’hôtes"/>
+			<mx:VBox name="chambrehote" verticalGap="0" width="100%"/>
+			<mx:Text styleName="texteMenu" text="Gastronomie "/>
+			<mx:VBox name="gastronomie" verticalGap="0" width="100%"/>
+			<mx:Text styleName="texteMenu" text="Château viticole"/>
+			<mx:VBox name="chateauviti" verticalGap="0" width="100%"/>
+			<mx:Text styleName="texteMenu" text="Transports "/>
+			<mx:VBox name="transport" verticalGap="0" width="100%"/>
+		</mx:VBox>
+	</mx:HBox>
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Spacer;
+			import mx.controls.Text;
+			import mx.collections.ArrayCollection;
+			import mx.rpc.http.mxml.HTTPService;
+			import mx.rpc.events.ResultEvent;
+			import mx.events.ListEvent;
+			
+			
+			private var actuXML:XML;
+			private var _urlFlux:String;
+
+			
+			public function set urlFlux(urlFlux:String):void{
+				var httpService:HTTPService = new HTTPService();
+				_urlFlux = urlFlux;
+				httpService.url = urlFlux;
+				httpService.resultFormat = "e4x";
+				httpService.addEventListener(ResultEvent.RESULT, onRecupXml);
+				httpService.send();
+			}
+			
+			private function onRecupXml(e:ResultEvent):void {
+				actuXML = e.result as XML;
+				afficherListe();
+			}
+			
+			private function afficherListe():void  {
+				for each (var actu:XML in actuXML.item) {
+					var description:Text = new Text();
+					description.text = actu.description;
+					description.styleName = "texteCorps";
+					description.percentWidth = 100;
+					
+					var url:Text = new Text();
+					//<a href="../assets/programme-bsport.pdf" target="_blank">Programme des cours</a>
+					url.htmlText = "<u><a href=\"" + actu.url + "\" target=\"_blank\">" + actu.url + "</a></u>";
+					url.styleName = "texteCorpsSelec";
+					url.percentWidth = 100;
+					
+					var spacer:Spacer = new Spacer();
+					spacer.height = 30;
+					
+					var o:* = colonne1.getChildByName(actu.libelle);
+					if(o == null) {
+						o = colonne2.getChildByName(actu.libelle);
+					}
+					if(o != null) {
+						VBox(o).addChild(description);
+						VBox(o).addChild(url);
+						VBox(o).addChild(spacer);
+					} else {
+						noLabelBox.addChild(description);
+						noLabelBox.addChild(url);
+						noLabelBox.addChild(spacer);
+					}
+				}
+			}
+			
+		]]>
+	</mx:Script>
+</mx:VBox>

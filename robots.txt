@@ -1,0 +1,13 @@
+# ELEVAGELAMA.COM 
+# Robot Exclusion File -- robots.txt
+# Author:  admin@iconeo.fr
+# Last Updated:  30/10/2010 11:44:00
+
+# Disallow all
+User-agent: *
+Disallow: /admin/
+Disallow: /include/
+Disallow: /stats/
+
+# Sitemap
+Sitemap: http://www.elevagelama.com/sitemap.xml

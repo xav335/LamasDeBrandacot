@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox xmlns:mx="http://www.adobe.com/2006/mxml" height="30" width="300"
+	useHandCursor="true" buttonMode="true" mouseChildren="false"
+	horizontalAlign="left"
+	verticalScrollPolicy="off"
+	horizontalScrollPolicy="off"
+	horizontalGap="0">
+	<!--mx:Label text="{data.date} : " styleName="texteCorpsSelec" textAlign="left" width="94"/-->
+	<mx:VBox width="100%">
+		<mx:Label text="{data.texte}" styleName="texteCorps" textAlign="left" width="100%"/>
+		<mx:HRule width="100%"/>
+	</mx:VBox>
+</mx:HBox>

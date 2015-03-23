@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="1200" height="537" xmlns:tools="com.iconeo.tools.*"
+	horizontalScrollPolicy="off" verticalScrollPolicy="off"
+	creationComplete="init()">
+	
+	<mx:Fade id="cacher" alphaFrom="1" alphaTo="0"/>
+	<mx:Fade id="montrer" alphaFrom="0" alphaTo="1"/>
+	
+	<mx:Image id="image1" source="../assets/image-fond-1.jpg" visible="true"
+		show="vignette1.filters = [_filter];" hide="vignette1.filters = null;"
+		showEffect="montrer" hideEffect="cacher"/>
+	<mx:Image id="image2" source="../assets/image-fond-2.jpg" visible="false"
+		show="vignette2.filters = [_filter];" hide="vignette2.filters = null;"
+		showEffect="montrer" hideEffect="cacher"/>
+	<mx:Image id="image3" source="../assets/image-fond-3.jpg" visible="false"
+		show="vignette3.filters = [_filter];" hide="vignette3.filters = null;"
+		showEffect="montrer" hideEffect="cacher"/>
+	
+	<mx:HBox bottom="20" right="120">
+		<tools:SmoothImageCanvas
+			id="vignette1"
+			width="120" height="54"
+			backgroundColor="#FFFFFF" epaisseur="1"
+			source="../assets/image-fond-1.jpg"
+			useHandCursor="true" buttonMode="true" mouseChildren="false"
+			click="indexImageCourante = 0;timer.stop();image1.visible = true;image2.visible = false;image3.visible = false;timer.start();">
+		</tools:SmoothImageCanvas>
+		
+		<tools:SmoothImageCanvas
+			id="vignette2"
+			width="120" height="54"
+			backgroundColor="#FFFFFF" epaisseur="1"
+			source="../assets/image-fond-2.jpg"
+			useHandCursor="true" buttonMode="true" mouseChildren="false"
+			click="indexImageCourante = 1;timer.stop();image1.visible = false;image2.visible = true;image3.visible = false;timer.start();">
+		</tools:SmoothImageCanvas>
+		
+		<tools:SmoothImageCanvas
+			id="vignette3"
+			width="120" height="54"
+			backgroundColor="#FFFFFF" epaisseur="1"
+			source="../assets/image-fond-3.jpg"
+			useHandCursor="true" buttonMode="true" mouseChildren="false"
+			click="indexImageCourante = 2;timer.stop();image1.visible = false;image2.visible = false;image3.visible = true;timer.start();">
+		</tools:SmoothImageCanvas>
+		
+	</mx:HBox>
+	
+	<mx:Script>
+		<![CDATA[
+			private var _filter:ColorMatrixFilter = new ColorMatrixFilter([.35,.35,.35,0,0,.35,.35,.35,0,0,.35,.35,.35,0,0,.35,0,0,1,0]);
+			private var tab:Array;
+			private var indexImageCourante:int = 0;
+			private var timer:Timer;
+			
+			private function init():void {
+				tab = [image1, image2, image3];
+				vignette1.filters = [_filter];
+				timer = new Timer(3000);
+				timer.addEventListener(TimerEvent.TIMER, onTimer);
+				timer.start();
+			}
+			private function onTimer(e:TimerEvent):void {
+				Image(tab[indexImageCourante]).visible = false;
+				indexImageCourante = (indexImageCourante+1)%tab.length;
+				Image(tab[indexImageCourante]).visible = true;
+			}
+		]]>
+	</mx:Script>
+</mx:Canvas>

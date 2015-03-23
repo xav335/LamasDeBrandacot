@@ -1,0 +1,14 @@
+# BSPORT.FR
+# Robot Exclusion File -- robots.txt
+# Author:  admin@iconeo.fr
+# Last Updated:  23/07/2010 11:44:00
+
+# Disallow all
+User-agent: *
+Disallow: /admin/
+Disallow: /ttf/
+Disallow: /include/
+Disallow: /stats/
+
+# Sitemap
+Sitemap: http://www.bsport.fr/sitemap.xml

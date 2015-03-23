@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:actualites="com.iconeo.components.actualites.*"
+	width="1200" height="100%"
+	verticalScrollPolicy="off"
+	verticalGap="0" xmlns:components="com.iconeo.components.*">
+	<mx:Script>
+		<![CDATA[
+			import mx.core.Application;
+		]]>
+	</mx:Script>
+	<mx:Metadata>
+		[Event(name="changerPage", type="com.iconeo.events.NavigationEvent")]
+	</mx:Metadata>
+	
+	<mx:HBox>
+		<mx:Canvas horizontalScrollPolicy="off" verticalScrollPolicy="off" width="867">
+			<components:FondDefilant x="-160" width="1093"/>
+			<mx:Image y="17" source="../assets/silhouette.png" x="-160"/>
+			<mx:Image source="../assets/bouton_partenaires.png" x="15" y="415"
+				useHandCursor="true" buttonMode="true" mouseChildren="false"
+				click="{Application.application.body.currentState='partenaires'}"/>
+		</mx:Canvas>
+		<mx:VBox height="100%">
+			<mx:Text styleName="texteTitre" text="actualités"/>
+			<actualites:CorpsApercusActualites
+				urlFlux="http://www.elevagelama.com/xmlNews.php"
+				width="100%" height="100%"
+				changerPage="dispatchEvent(event)"/>
+		</mx:VBox>
+	</mx:HBox>
+	
+	
+	<mx:HBox width="100%" backgroundColor="#503D30" verticalAlign="middle">
+		<!--Edito-->
+		<mx:VBox horizontalAlign="right">
+			<mx:Text styleName="texteEdito">
+				<mx:htmlText>
+<![CDATA[Au sein de notre élevage professionnel situé en Haute-Gironde,
+nous nous destinons à la production de crias de qualité (petits lamas).
+]]>
+				</mx:htmlText>
+			</mx:Text>
+			<mx:Text styleName="texteEdito">
+				<mx:htmlText>
+<![CDATA[Inscrit dans le développement durable de par nos activités, nous vous recevons également
+sous les labels de ferme de découverte lors de visites guidées et de Ferme pédagogique.]]>
+				</mx:htmlText>
+			</mx:Text>
+			<mx:Text styleName="texteEdito">
+				<mx:htmlText>
+<![CDATA[Venez partager notre passion.]]>
+				</mx:htmlText>
+			</mx:Text>
+			<mx:Image source="../assets/signature.png"/>
+		</mx:VBox>
+		
+		<mx:VRule height="80%" width="1"/>
+		
+		<!--Actus-->
+		
+		<mx:Image y="17" source="../assets/ponpon.png"/>
+	</mx:HBox>
+</mx:VBox>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox  xmlns:mx="http://www.adobe.com/2006/mxml"
+	height="55" width="100%" horizontalAlign="center"
+	backgroundAlpha="0" borderStyle="none"
+	paddingTop="0" verticalGap="0">
+	
+	<mx:Metadata>
+		[Event(name="changerPage", type="com.iconeo.events.NavigationEvent")]
+	</mx:Metadata>
+	
+	<mx:Spacer height="-12"/>
+	<mx:HBox backgroundAlpha="0">
+		<mx:Text text="Notre ferme"
+			useHandCursor="true" buttonMode="true" mouseChildren="false"
+			styleName="{(Application.application.body.currentState == 'ferme')?'texteMenuSelec':'texteMenu'}"
+			click="naviguer('ferme')"/>
+		<mx:Text text="|"
+			styleName="texteMenu"/>
+		<mx:Text text="Le lama"
+			useHandCursor="true" buttonMode="true" mouseChildren="false"
+			styleName="{(Application.application.body.currentState == 'lama')?'texteMenuSelec':'texteMenu'}"
+			click="naviguer('lama')"/>
+		<mx:Text text="|" styleName="texteMenu"/>
+		<mx:Text text="Lama gardien de troupeau"
+			useHandCursor="true" buttonMode="true" mouseChildren="false"
+			styleName="{(Application.application.body.currentState == 'gardien')?'texteMenuSelec':'texteMenu'}"
+			click="naviguer('gardien')"/>
+		<mx:Text text="|"
+			styleName="texteMenu"/>
+		<mx:Text text="Visites guidées"
+			useHandCursor="true" buttonMode="true" mouseChildren="false"
+			styleName="{(Application.application.body.currentState == 'decouverte')?'texteMenuSelec':'texteMenu'}"
+			click="naviguer('decouverte')"/>
+		<mx:Text text="|"
+			styleName="texteMenu"/>
+		<mx:Text text="Lamas en vente"
+			useHandCursor="true" buttonMode="true" mouseChildren="false"
+			styleName="{(Application.application.body.currentState == 'vente')?'texteMenuSelec':'texteMenu'}"
+			click="naviguer('vente')"/>
+	</mx:HBox>
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.core.Application;
+			import com.iconeo.events.NavigationEvent;
+			private function naviguer(page:String):void {
+				var e:NavigationEvent = new NavigationEvent(NavigationEvent.CHANGER_PAGE);
+				e.nouvellePage = page;
+				dispatchEvent(e);
+			}
+		]]>
+	</mx:Script>
+</mx:VBox>

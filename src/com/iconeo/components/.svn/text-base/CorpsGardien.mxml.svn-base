@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml"
+	width="1200" height="100%"
+	verticalScrollPolicy="off"
+	verticalGap="0" xmlns:components="com.iconeo.components.*"
+	horizontalAlign="center" xmlns:tools="com.iconeo.tools.*"
+	backgroundColor="#624B3B" xmlns:controls="com.fxcomponents.controls.*">
+	<mx:VBox width="900"
+		horizontalAlign="center">
+		
+		<mx:Spacer height="50"/>
+		
+		<mx:HBox width="100%">
+			<mx:VBox width="100%"
+				horizontalAlign="center">
+				<mx:Text styleName="texteEdito"
+					text="LE LAMA GARDIEN DE TROUPEAU"/>
+				<mx:Spacer height="-15"/>
+				<mx:Text styleName="texteCorps">
+					<mx:htmlText>
+						<![CDATA[<b>Information à l’attention des professionnels, éleveurs de moutons.</b>]]>
+					</mx:htmlText>
+				</mx:Text>
+				<mx:Spacer height="10"/>
+				<mx:Text styleName="texteCorps"
+					width="100%">
+					<mx:htmlText>
+						<![CDATA[Aujourd’hui encore, la pratique du lama Gardien de Troupeau est peu connue des bergers et de la plupart des éleveurs de lamas. Depuis plusieurs années  notre élevage s’est particulièrement spécialisé dans la production du <b>lama gardien de troupeau</b>. Expérience et professionnalisme, nous livrons chez le berger  le lama avec toutes les consignes de conduite quant à cette fonction et nous en assurons le suivi.
+	
+	Très pratiqué aux Etats Unis, Canada et en Angleterre nous avons procédé à de nombreuses investigations auprès de certains éleveurs. Les rapprochements effectués, nous avons sélectionné depuis 2007 quelques petits lamas de notre élevage, aujourd’hui deux d’entre eux protègent chacun un troupeau entre 300 et 500 brebis en France. 
+	]]>
+					</mx:htmlText>
+				</mx:Text>
+				
+				<mx:Spacer height="20"/>
+	
+				<mx:Text styleName="texteCorps"
+					width="100%">
+					<mx:htmlText>
+						<![CDATA[<b>Qu’est-ce qu’un lama Gardien de troupeau?</b>]]>
+					</mx:htmlText>
+				</mx:Text>
+				<mx:Text styleName="texteCorps"
+					width="100%">
+					<mx:htmlText>
+						<![CDATA[Le <b>lama gardien de troupeau</b> est un lama que l’on introduit dans un troupeau de moutons avec pour objectif de les protéger des prédateurs qui sont en général des canidés (chiens errants, renards, loups, coyotes, etc.)]]>
+					</mx:htmlText>
+				</mx:Text>
+				<mx:Spacer height="10"/>
+				
+				<tools:SmoothImageCanvas width="428" height="241"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/vignette_5gardienTroupeauSanPedro.jpg"
+					urlMediaFullScreen="http://www.elevagelama.com/assets/5gardienTroupeauSanPedro.flv"/>
+				
+				<mx:Spacer height="10"/>
+				<mx:Text styleName="texteCorps"
+					width="100%">
+					<mx:htmlText>
+						<![CDATA[<b>Une belle alternative avec le chien gardien de troupeau</b>]]>
+					</mx:htmlText>
+				</mx:Text>
+				<mx:Text styleName="texteCorps"
+					width="100%">
+					<mx:htmlText>
+						<![CDATA[Le chien « patou »  dressé à cette fonction n’est pas toujours efficace et certains sont signalés comme devenus agressifs envers les touristes, voir leur maître.  
+	Les expériences menées avec le lama sont par contre très encourageantes, reste qu’il faut une connaissance approfondie quant à la conduite à tenir.
+	Avantages certains, le lama a une durée de vie de 20 ans et son alimentation reste la même que celle du mouton.]]>
+					</mx:htmlText>
+				</mx:Text>
+				<mx:Spacer height="10"/>
+			</mx:VBox>
+		
+			<mx:VBox>
+				<mx:Spacer height="30"/>
+				
+				<tools:SmoothImageCanvas width="354" height="238"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/vignette_gardien.jpg"
+					urlMediaFullScreen="http://www.elevagelama.com/assets/gardien.flv"/>
+
+				<mx:Spacer height="20"/>
+				
+				<mx:HBox>
+					<mx:VBox>
+						<tools:SmoothImageCanvas width="175" height="135"
+							backgroundColor="#FFFFFF" epaisseur="4"
+							source="../assets/cheyenne 1.jpg"
+							urlMediaFullScreen="../assets/cheyenne 1.jpg"/>
+						<mx:Text styleName="texteLegende" text="Jeune lama «Cheyenne» sélectionné. Actuellement en pays graçois avec 300 brebis." width="175"/>
+						<tools:SmoothImageCanvas width="175" height="135"
+							backgroundColor="#FFFFFF" epaisseur="4"
+							source="../assets/cheyenne 2.jpg"
+							urlMediaFullScreen="../assets/cheyenne 2.jpg"/>
+						<mx:Text styleName="texteLegende" text="Cheyenne" width="175"/>
+					</mx:VBox>
+					<mx:VBox>
+						<tools:SmoothImageCanvas width="175" height="135"
+							backgroundColor="#FFFFFF" epaisseur="4"
+							source="../assets/Sunday.jpg"
+							urlMediaFullScreen="../assets/Sunday.jpg"/>
+						<mx:Text styleName="texteLegende" text="Lama «Sunday» actuellement en fonction dans le Puy de Dôme avec 500 brebis" width="175"/>
+						<tools:SmoothImageCanvas width="175" height="135"
+							backgroundColor="#FFFFFF" epaisseur="4"
+							source="../assets/cheyenne 3.jpg"
+							urlMediaFullScreen="../assets/cheyenne 3.jpg"/>
+						<mx:Text styleName="texteLegende" text="Cheyenne" width="175"/>
+					</mx:VBox>
+				</mx:HBox>
+			</mx:VBox>
+
+		</mx:HBox>
+		
+	</mx:VBox>
+	
+	
+	
+</mx:VBox>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Form xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:components="com.iconeo.components.*"
+	creationComplete="init()">
+	<mx:FormItem direction="vertical" label="E-mail principal" labelStyleName="texteCorps" width="100%">
+		<components:IndicationTextInput id="email" width="100%" height="30" paddingLeft="5" paddingTop="4"
+				indication="adresse@mail.com" keyDown="handleKeyDownContact(event)"/>
+	</mx:FormItem>
+	<mx:FormItem label="Nom Prénom" direction="horizontal" labelStyleName="texteCorps" width="100%">
+		<components:IndicationTextInput id="nom" width="100%" height="30" paddingLeft="5" paddingTop="4"
+				indication="Mes nom et prénom" keyDown="handleKeyDownContact(event)"/>
+	</mx:FormItem>
+		<mx:FormItem label="Téléphone" direction="horizontal" labelStyleName="texteCorps" width="100%">
+		<components:IndicationTextInput id="telephone" width="100%" height="30" paddingLeft="5" paddingTop="4"
+				indication="Mon téléphone" keyDown="handleKeyDownContact(event)"/>
+	</mx:FormItem>
+	<mx:FormItem label="Mon message" direction="horizontal" labelStyleName="texteCorps" width="100%" height="100%">
+		<components:IndicationTextArea id="message" width="100%" height="150" paddingLeft="5" paddingTop="4"
+				indication="Mon message" styleName="IndicationTextArea"/>
+	</mx:FormItem>
+	<mx:Text text="ENVOYER" width="100%" textAlign="right"
+		click="{handleClickEnvoi()}"
+		useHandCursor="true" buttonMode="true" mouseChildren="false"
+		styleName="texteMenu"/>
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.rpc.http.mxml.HTTPService;
+			import mx.controls.Alert;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			
+			private var clickOnceMessage:Boolean = false;
+			private var _texteMessage:String = "";
+			
+			public static var messagePreRempli:String; 
+
+			public var pageMail:String = "http://www.elevagelama.com/mail.php";
+			
+			private function init():void{
+				if(_texteMessage != null && _texteMessage != ""){
+					message.text = _texteMessage;
+				} else {
+					if(messagePreRempli != null && messagePreRempli != ""){
+						message.text = messagePreRempli;
+					}
+				}
+			}
+			
+			public function set texteMessage(value:String):void{
+				if(value != null && value != ""){
+					_texteMessage = value;
+					message.text = value;
+					message.saisieOn = true;
+				}
+			}
+
+			/**
+			 * Prend en charge la touche entrée pour valider le form contact
+			 */
+			private function handleKeyDownContact(event:KeyboardEvent):void{
+				if(event.keyCode == Keyboard.ENTER){
+					handleClickEnvoi();
+				}
+			}
+			private function handleClickEnvoi():void{
+				var alerta:Alert;
+				if(telephone.texteSaisi == ""){
+					alerta = Alert.show("Merci d'indiquer un numéro de téléphone, afin que nous puissions vous joindre.");
+					alerta.styleName = "alertBox";
+				}else if(message.texteSaisi==""){	
+					alerta = Alert.show("Veuillez saisir un message.");
+					alerta.styleName = "alertBox";
+				}else if(message.texteSaisi != "" && !validateEmail(email.texteSaisi)) {
+					alerta = Alert.show("Le format de votre adresse email est incorrect");
+					alerta.styleName = "alertBox";
+				} else {
+					var httpService:HTTPService = new HTTPService();
+					httpService.url = pageMail;
+					httpService.method="POST";
+					httpService.useProxy = false;
+					httpService.request = {tel:telephone.text, nom: nom.text, email: email.text, message: message.text};
+					httpService.addEventListener(ResultEvent.RESULT, handleMailResultContact);
+					httpService.addEventListener(FaultEvent.FAULT, handleFault);
+					
+					httpService.send();
+				}
+			}
+			private function handleMailResultContact(event:ResultEvent):void{
+				if(event.result=="OK"){
+					var alerta:Alert = Alert.show("Votre message à été envoyé.");
+					alerta.styleName = "alertBox";
+
+					email.text = "";
+					nom.text = "";
+					message.text = "";
+					telephone.text = "";
+				}
+			}
+
+			private function validateEmail(str:String):Boolean {
+	            var pattern:RegExp = /(\w|[_.\-])+@((\w|-)+\.)+\w{2,4}+/;
+	            var result:Object = pattern.exec(str);
+
+	            return result != null;
+	        }
+			private function handleFault(event:FaultEvent):void{
+				var alerta:Alert = Alert.show("Pb de communication");
+				alerta.styleName = "alertBox";
+			}
+		]]>
+	</mx:Script>
+</mx:Form>

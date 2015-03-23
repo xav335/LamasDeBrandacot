@@ -1,0 +1,334 @@
+/*****************************************   MENU  BRATTA !!!!!!!! le laisser en haut ici !!!!!!   ********************/
+
+ /* CoolMenus 4 - default styles - do not edit */
+  .clCMEvent{position:absolute; width:99%; height:99%; clip:rect(0,100%,100%,0); left:0; top:0; visibility:visible;z-index:1}
+  .clCMAbs{position:absolute; visibility:hidden; left:0; top:0;z-index:1}
+  /* CoolMenus 4 - default styles - end */
+
+  /*Style for the background-bar*/
+  .clBar{position:absolute; width:10; height:10; background-color:#0F879C; layer-background-color:#0F879C; visibility:hidden;z-index:1}
+
+  /*Styles for level 0*/
+  .clLevel0,.clLevel0over{position:absolute; padding:2px; font-family:verdana,helvetica; font-size:11px; font-weight:bold;z-index:1}
+  .clLevel0{color:#000000;z-index:1}
+  .clLevel0over{cursor:pointer; cursor:hand;z-index:1 }
+  .clLevel0border{position:absolute; visibility:hidden; z-index:1}
+
+  /*Styles for level 1*/
+  .clLevel1,.clLevel1over{position:absolute;padding: 2px;font-family:verdana,helvetica;font-size:9px;	font-weight: bold;z-index:1 }
+  .clLevel1{background-color:#523F31; layer-background-color:#523F31; color:#ffffff;z-index:1}
+  .clLevel1over{background-color:#e1e1e1; layer-background-color:#e1e1e1; color:#000000; cursor:pointer; cursor:hand;z-index:1 }
+  .clLevel1border{position:absolute; visibility:hidden; background-color:#ffffff; layer-background-color:#ffffff;z-index:1}
+
+  /*Styles for level 2*/
+  .clLevel2, .clLevel2over{position:absolute; padding:2px; font-family:verdana,helvetica; font-size:9px; font-weight:normal}
+  .clLevel2{background-color:#D6F3F4; layer-background-color:#D6F3F4; color:#0F879C;}
+  .clLevel2over{background-color:#0F879C; layer-background-color:#0F879C; color:#D6F3F4; cursor:pointer; cursor:hand; }
+  .clLevel2border{position:absolute; visibility:hidden; background-color:#0F879C; layer-background-color:#0F879C}
+/****************** valeur generales par defaut **********/
+/********************************************** FIN   MENU  BRATTA   ***********************************************************/
+body{
+	text-align : left;
+	font-family : Verdana;
+	font-size : 11px;
+	font-style: normal;
+	font-weight : normal;
+	color : #000000;
+	
+   /* overflow:auto; */
+	scrollbar-face-color : #999999; 
+	scrollbar-shadow-color : #ffffff; 
+	scrollbar-highlight-color : #e1e1e1; 
+	scrollbar-3dlight-color : #e1e1e1; 
+	scrollbar-darkshadow-color : #e1e1e1; 
+	scrollbar-track-color : #e1e1e1; 
+	scrollbar-arrow-color : #e1e1e1;
+}
+/*********************************/
+#crochet{
+	color: #ffffff; 
+	font-size: 20px ;
+	font-weight : bold; 
+}
+#crochet_menu{
+	color: #523F31; 
+	font-size: 12px;
+	font-weight : bold; 
+}
+#crochet_menu2{
+	color: #ffffff; 
+	font-size: 13px;
+	font-weight : bold; 
+}	
+#crochet_menu3{
+	color: #000000; 
+	font-size: 13px;
+	font-weight : bold; 
+}	
+/************** Liens	**********************/
+#accueil:link{
+	text-decoration:none ;
+	font-family : verdana, arial, sans-serif;
+	font-size : 10px;
+	font-weight : bold; 
+	color:#999999 ;
+}
+#accueil:visited {
+	text-decoration:none ;
+	font-family : verdana, arial, sans-serif;
+	font-size : 10px;
+	font-weight : bold; 
+	color:#999999 ;
+}
+#accueil:hover {
+	text-decoration:none ; 
+	font-family : verdana, arial, sans-serif;
+	font-size : 10px;
+	font-weight : bold; 
+	color:#000000 ;
+}
+#accueil_menu:link{
+	text-decoration:none ;
+	font-family : verdana, arial, sans-serif;
+	font-size : 16px;
+	font-weight : bold; 
+	color:#ffffff ;
+}
+#accueil_menu:visited {
+	text-decoration:none ;
+	font-family : verdana, arial, sans-serif;
+	font-size : 16px;
+	font-weight : bold; 
+	color:#ffffff ;
+}
+#accueil_menu:hover {
+	text-decoration:none ; 
+	font-family : verdana, arial, sans-serif;
+	font-size : 16px;
+	font-weight : bold; 
+	color:#000000 ;
+}
+#menu:link{
+	text-decoration:none ;
+	font-family : verdana, arial, sans-serif;
+	font-size : 11px;
+	font-weight : bold; 
+	color:#000000 ;
+}
+#menu:visited {
+	text-decoration:none ;
+	font-family : verdana, arial, sans-serif;
+	font-size : 11px;
+	font-weight : bold; 
+	color:#000000 ;
+}
+#menu:hover {
+	text-decoration:none ; 
+	font-family : verdana, arial, sans-serif;
+	font-size : 11px;
+	font-weight : bold; 
+	color:#523F31 ;
+}
+#contact{
+	text-align : left;
+	font-family : Verdana;
+	font-size : 12px;
+	font-style: normal;
+	font-weight : normal;
+	color : #000000;
+	text-decoration: underline;
+}
+
+a.contact:hover{
+	text-align : left;
+	font-family : Verdana;
+	font-size : 12px;
+	font-style: normal;
+	font-weight : normal;
+	color : #000000;
+	text-decoration: none;
+}
+/************   Polices   ********************/
+span.prixbarre_noir {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: line-through;
+}
+
+#texte_prix {
+	font-family : verdana, arial, sans-serif;
+	font-size : 12px;
+	color : #ffffff;
+	font-weight : bold;
+}
+#texte_top5 {
+	font-family : verdana, arial, sans-serif;
+	font-size : 36px;
+	color : #ffffff;
+	font-weight : bold;
+}
+#texte4 {
+	font-family : verdana, arial, sans-serif;
+	font-size : 20px;
+	color : #000000;
+	font-weight : bold;
+}
+#texte3 {
+	font-family : verdana, arial, sans-serif;
+	font-size : 16px;
+	color : #000000;
+	font-weight : bold;
+}
+#texte3_blanc {
+	font-family : verdana, arial, sans-serif;
+	font-size : 16px;
+	color : #ffffff;
+    font-weight : bold;
+}
+#texte2 {
+	font-family : verdana, arial, sans-serif;
+	font-size : 12px;
+	color : #000000;
+}
+#texte2b {
+	font-family : verdana, arial, sans-serif;
+	font-size : 12px;
+	color : #000000;
+	font-weight : bold;
+}
+#texte2_blanc {
+	font-family : verdana, arial, sans-serif;
+	font-size : 12px;
+	color : #ffffff;
+	font-weight : bold;
+}
+#texte2_rouge {
+	font-family : verdana, arial, sans-serif;
+	font-size : 12px;
+	color : #523F31;
+	font-weight : bold;
+}
+
+#texte3_rouge {
+	font-family : verdana, arial, sans-serif;
+	font-size : 18px;
+	color : #1C253E;
+	font-weight : bold;
+}
+#texte1 {
+	font-family : verdana, arial, sans-serif;
+	font-size : 10px;
+	color : #000000;
+}
+#texte1_blanc {
+	font-family : verdana, arial, sans-serif;
+	font-size : 10px;
+	color : #ffffff;
+}
+#texte0 {
+	font-family : verdana, arial, sans-serif;
+	font-size : 8px;
+	color : #ffffff;
+}
+
+td.affichage {
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #e1e1e1;
+	text-align: left;
+}
+
+td.affichage2 {
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #ffffff;
+	text-align: left;
+}
+
+a.affichageT {
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	background-color: #ffffff;
+	text-align: left;
+}
+TD.affichageT {
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	background-color: #ffffff;
+	text-align: left;
+}
+/************   Backgrounds   ********************/
+
+#fond_general{
+background-color: #ffffff;
+} 
+
+#fond_rouge{
+background-color: #523F31;
+} 
+
+#fond_rose{
+background-color: #cb4e70;
+} 
+
+#fond_blanc{
+background-color: #ffffff;
+} 
+
+#fond_gris{
+background-color: #e1e1e1;
+} 
+
+#fond_gris2{
+background-color: #999999;
+} 
+/************   Ascenseur   ********************/
+
+/*.auto { 
+position: relative ; 
+width: 25% ; height: 15% ; 
+overflow: auto ; 
+background-color : #CCFFFF ; 
+padding: 3px ; 
+font-size: 10pt ; 
+border: solid 2px blue ; }
+*/
+/************   Border   ********************/
+
+#border1 { border-style: solid ; border-width: 2px ; border-color: #000000 ; } 
+
+#border2 { border-style: solid ; border-width: 2px ; border-color: #000000 ; { 
+border-top-color: #e1e1e1 ;
+border-right-color: #ffffff;
+border-bottom-color: #e1e1e1; 
+border-left-color: #ffffff; 
+}
+
+INPUT {
+	background-color: #ffffff;
+	border: thin groove;
+	color: #000000;
+	font-weight: bold;
+	font-size: 12px;
+}
+SELECT{
+	background-color:#ffffff;
+	color: #000000;
+	font-weight: bold;
+	font-size: 12px;
+}
+TEXTAREA{
+	background-color:#ffffff;
+	color: #000000;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.td_normal{
+	font-size: 14px;
+}

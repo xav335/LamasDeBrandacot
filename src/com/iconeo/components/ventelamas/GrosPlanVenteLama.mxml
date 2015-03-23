@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml"
+	horizontalScrollPolicy="off" verticalScrollPolicy="off" xmlns:tools="com.iconeo.tools.*"
+	backgroundColor="#000000" backgroundAlpha="0.2" xmlns:controls="com.fxcomponents.controls.*">
+
+	<mx:HBox width="100%" height="100%" paddingLeft="10" paddingTop="10">
+		<mx:Text width="100%" height="100%" styleName="texteCorps"
+			text="{donnees.texte}"/>
+		<mx:TileList id="listeMedia" height="100%" width="100%"
+			borderStyle="none"
+			dataProvider="{donnees.listeMedia}"
+			itemRenderer="{new ClassFactory(MediaVenteLamaRenderer)}"
+			backgroundAlpha="0"
+			itemClick="onItemClick(event)"/>
+	</mx:HBox>
+	
+	<mx:VBox horizontalAlign="center" width="100%">
+		<mx:Canvas backgroundAlpha=".3" backgroundColor="#FFFFFF" borderStyle="solid" cornerRadius="20">
+			<mx:Text styleName="texteMenu" text="Contactez-nous à propos de ce lama"
+				useHandCursor="true" buttonMode="true" mouseChildren="false"
+				click="{FormulaireContact.messagePreRempli = 'Merci de me renseigner à propos de ce lama : '+donnees.texte;Application.application.body.currentState='contact'}"/>
+		</mx:Canvas>
+	</mx:VBox>
+	
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.core.Application;
+			import com.iconeo.components.FormulaireContact;
+			import com.iconeo.tools.VisuMediaSingleton;
+			import mx.events.ListEvent;
+			import com.iconeo.data.ActuData;
+			
+			[Bindable]
+			public static var donnees:ActuData;
+		
+			private function onItemClick(e:ListEvent):void{
+				var item:* = listeMedia.selectedItem;
+				var urlMedia:String = item.urlMedia;
+				VisuMediaSingleton.instance.urlMedia = urlMedia;
+				VisuMediaSingleton.instance.afficherMedia();
+				VisuMediaSingleton.instance.visible = true;
+			}
+
+		]]>
+	</mx:Script>
+</mx:VBox>

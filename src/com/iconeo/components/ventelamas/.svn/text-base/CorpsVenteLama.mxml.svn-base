@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox xmlns:mx="http://www.adobe.com/2006/mxml"
+	width="900" height="442"
+	backgroundAlpha="0"
+	xmlns:tools="com.iconeo.tools.*" xmlns:ventelamas="com.iconeo.components.ventelamas.*" xmlns:controls="com.fxcomponents.controls.*">
+	<mx:VBox width="100%">
+		<mx:Text width="100%" styleName="texteEdito"
+			textAlign="center"
+			text="Cliquez sur les vignettes ci-dessous pour voir les descriptions complètes et photos de nos lamas en vente."/>
+
+		<mx:TileList id="liste" width="100%" height="100%"
+			backgroundAlpha="0" borderStyle="none"
+			itemRenderer="com.iconeo.components.actualites.ActuRenderer"
+			direction="horizontal" maxColumns="1"
+			verticalScrollPolicy="auto" horizontalScrollPolicy="off"
+			itemClick="afficherActualite(event)"/>
+			
+	</mx:VBox>
+	
+	
+	
+	<ventelamas:GrosPlanVenteLama id="showActualite" width="100%" height="100%"/>
+	<mx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.rpc.http.mxml.HTTPService;
+			import mx.rpc.events.ResultEvent;
+			import mx.events.ListEvent;
+			
+			import com.iconeo.data.ActuData;
+			import com.iconeo.data.MediaData;
+			
+			
+			private var actuXML:XML;
+			private var _urlFlux:String;
+
+			private function afficherActualite(e:ListEvent):void{
+				trace("coucou)))");
+				GrosPlanVenteLama.donnees = e.itemRenderer.data as ActuData;
+			}
+	
+			
+			public function set urlFlux(urlFlux:String):void{
+				var httpService:HTTPService = new HTTPService();
+				_urlFlux = urlFlux;
+				httpService.url = urlFlux;
+				httpService.resultFormat = "e4x";
+				httpService.addEventListener(ResultEvent.RESULT, onRecupXml);
+				httpService.send();
+			}
+			
+			private function onRecupXml(e:ResultEvent):void {
+				actuXML = e.result as XML;
+				afficherListe();
+				selectionnerPremier();
+			}
+			private function afficherListe():void  {
+				var collection:ArrayCollection = new ArrayCollection();
+				for each (var actu:XML in actuXML.item) {
+					var actuData:ActuData = new ActuData();
+					actuData.date = actu.date;
+					actuData.texte = actu.texte;
+					actuData.listeMedia = new Array();
+					for each (var media:XML in actu.media) {
+						var mediaData:MediaData = new MediaData();
+						mediaData.type = media.@type;
+						mediaData.urlApercu = media.urlApercu;
+						mediaData.urlMedia = media.urlMedia;
+						actuData.listeMedia.push(mediaData);
+					}
+	
+					collection.addItem(actuData);
+				}
+				liste.dataProvider = collection;
+			}
+			
+			private function selectionnerPremier():void  {
+				liste.selectedIndex = 0;
+				GrosPlanVenteLama.donnees = liste.dataProvider[0];
+			}
+		]]>
+	</mx:Script>
+</mx:HBox>

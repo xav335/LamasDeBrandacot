@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:google="com.google.maps.*">
+	<mx:String id="key"/>
+	<mx:Number id="latitude"/>
+	<mx:Number id="longitude"/>
+	
+	<google:Map xmlns:maps="com.google.maps.*" id="map"
+			mapevent_mapready="onMapReady(event)" width="100%" height="100%"
+			key="{this.key}"/>
+			
+	<mx:Script>
+		<![CDATA[
+			import com.google.maps.styles.FillStyle;
+			import com.google.maps.styles.StrokeStyle;
+			import com.google.maps.overlays.MarkerOptions;
+			import com.google.maps.overlays.Marker;
+			import com.google.maps.controls.MapTypeControl;
+			import com.google.maps.controls.PositionControl;
+			import com.google.maps.controls.ZoomControl;
+			import com.google.maps.MapType;
+			import com.google.maps.LatLng;
+			
+			private function onMapReady(event:Event):void {
+     		 	this.map.setCenter(new LatLng(latitude,longitude), 17, MapType.NORMAL_MAP_TYPE);
+				
+				map.addControl(new PositionControl());
+				map.addControl(new MapTypeControl());
+				var markerA:Marker = new Marker(
+				new LatLng(latitude,longitude),
+				   new MarkerOptions({
+						strokeStyle: new StrokeStyle({color: 0x987654}),
+						fillStyle: new FillStyle({color: 0x223344, alpha: 0.8}),
+						radius: 12,
+						hasShadow: true
+						})
+				);
+				map.addOverlay(markerA);
+        		map.zoomOut();
+        		map.zoomOut();
+    		}
+		]]>
+	</mx:Script>
+	<mx:Image x="11" y="74" source="../assets/zoom_in.png" click="map.zoomIn();" toolTip="Zoom avant"/>
+	<mx:Image x="44" y="74" source="../assets/zoom_out.png" click="map.zoomOut();" toolTip="Zoom arrière"/>
+</mx:Canvas>

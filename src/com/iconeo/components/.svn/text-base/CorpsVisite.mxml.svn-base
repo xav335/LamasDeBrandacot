@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml"
+	width="1200" height="100%"
+	verticalScrollPolicy="off"
+	verticalGap="0" xmlns:components="com.iconeo.components.*"
+	horizontalAlign="center" xmlns:tools="com.iconeo.tools.*"
+	backgroundColor="#624B3B">
+	<mx:VBox width="900">
+		<mx:HBox width="100%">
+			<mx:Image source="../assets/logo-bienvenue.png"/>
+			<mx:VBox width="100%">
+				<mx:Text styleName="texteEdito" text="VISITES GUIDEES"/>
+				<mx:Text styleName="texteCorps" width="100%">
+					<mx:htmlText>
+						<![CDATA[<b>Ferme  de découverte de Lamas en Haute Gironde</b>
+
+Notre élevage « Les Lamas de Brandacot » a reçu les agréments de « ferme de découverte » en 2009 et de « ferme pédagogique » en 2011 par le réseau Bienvenue à la Ferme, chambre d’Agriculture de la Gironde.
+]]>
+					</mx:htmlText>
+				</mx:Text>
+			</mx:VBox>
+		</mx:HBox>
+		
+		<mx:Spacer height="20"/>
+		
+		<mx:HBox width="100%">
+			<mx:VBox width="100%">
+				<mx:HBox width="100%">
+					<mx:Text styleName="texteCorps" width="100%">
+						<mx:htmlText>
+							<![CDATA[Un troupeau d’une vingtaine de lamas, étalons, femelles et petits vivent sur 12 ha de prairies et de bois.
+Sur leur territoire, guidés par l’éleveur vous découvrirez leur mode de vie et leur singularité.
+
+Eleveur-naisseur, Joël vous fera plonger dans sa passion pour le lama. Après un passage obligé sur les informations scientifiques se sera la présentation de ses animaux (excellente génétique), vous y verrez des lamas primés en concours européens ainsi que l’unique lama récemment médaillé en France par 30 Million d’amis pour ses états de services exemplaires.
+
+Elevage peu commun vous découvrirez la pratique du gardien de troupeau, spécialité de notre élevage (rare en France).
+
+Vous repartirez de cette visite avec un tout autre regard sur le lama. Oui ces animaux peuvent être majestueux, dociles, et non,  les lamas de Brandacot ne crachent pas sur l’homme et vous saurez pourquoi ! 
+]]>
+						</mx:htmlText>
+					</mx:Text>
+				</mx:HBox>
+			</mx:VBox>
+			<mx:VBox>
+				<tools:SmoothImageCanvas width="367" height="242"
+						backgroundColor="#FFFFFF" epaisseur="4"
+						source="../assets/vignette_visite.jpg"
+						urlMediaFullScreen="http://www.elevagelama.com/assets/visite.flv"/>
+						
+				<mx:HBox paddingLeft="5">
+					<mx:VBox>
+						<tools:SmoothImageCanvas width="175" height="135"
+							backgroundColor="#FFFFFF" epaisseur="4"
+							source="../assets/Espace pique-nique.JPG"
+							urlMediaFullScreen="../assets/Espace pique-nique.JPG"/>
+						<mx:Text styleName="texteLegende" text="Espace pique-nique" width="175"/>
+					</mx:VBox>
+					<mx:VBox>
+						<tools:SmoothImageCanvas width="175" height="135"
+							backgroundColor="#FFFFFF" epaisseur="4"
+							source="../assets/IMG_3408.JPG"
+							urlMediaFullScreen="../assets/IMG_3408.JPG"/>
+						<mx:Text styleName="texteLegende" text="Bienvenue à la ferme des lamas" width="175"/>
+					</mx:VBox>
+				</mx:HBox>
+			</mx:VBox>
+
+		</mx:HBox>
+		
+		<mx:Text styleName="texteEdito" text="POUR LE GRAND PUBLIC"/>
+		<mx:HBox width="100%">
+			<mx:VBox>
+				<tools:SmoothImageCanvas width="175" height="135"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/photo grand public.JPG"
+					urlMediaFullScreen="../assets/photo grand public.JPG"/>
+				<mx:Text styleName="texteLegende" text="Visites pour le grand public" width="175"/>
+			</mx:VBox>
+
+			<mx:VBox width="100%">
+				<mx:Text styleName="texteCorps" width="100%">
+					<mx:htmlText>
+						<![CDATA[Les dates de visites  programmées pour le grand public sont visibles en page d’accueil (cartouche Actualités), à droite de l'écran d'accueil.
+	<u><b>Ouverture toute l’année:</b></u>
+	Individuel et groupe sur Rendez-vous, sauf dimanche(*) et jours fériés.
+	Durée de la visite : 1 heure 30
+	(*) Groupes sur réservation. 
+<u><b>Tarifs : </b></u>
+   Adulte: <b>6€</b> - de 3 à 12 ans: <b>4€</b>, gratuit pour les enfants de moins de 3 ans.
+   <b>Pour les groupes</b> de plus de <b>20</b> personnes : Adulte : <b>5€</b> - de 3 à 12 ans: <b>3,50€</b>
+   gratuit pour  un accompagnateur.
+						]]>
+					</mx:htmlText>
+				</mx:Text>
+			</mx:VBox>
+			
+		</mx:HBox>
+		
+		<mx:Spacer height="20"/>
+		
+		<mx:Text styleName="texteEdito" text="GROUPES SCOLAIRES ET CENTRES DE LOISIRS!"/>
+
+		<mx:HBox width="100%">
+			<mx:VBox width="100%">
+				<mx:Text styleName="texteCorps" width="100%">
+					<mx:htmlText>
+						<![CDATA[		<u><b>Ouverture :</b></u> 
+		Toute l’année, sur RDV
+		Durée de la visite : Demi-journée ou journée.
+	
+<u><b>Tarifs :</b></u>]]>
+					</mx:htmlText>
+				</mx:Text>
+				<mx:Grid>
+					<mx:GridRow>
+						<mx:GridItem>
+							<mx:Text styleName="texteCorps">
+								<mx:htmlText>
+									<![CDATA[<b>Description</b>]]>
+								</mx:htmlText>
+							</mx:Text>
+						</mx:GridItem>
+						<mx:GridItem>
+							<mx:Text styleName="texteCorps">
+								<mx:htmlText>
+									<![CDATA[<b>Tarif €</b>]]>
+								</mx:htmlText>
+							</mx:Text>
+						</mx:GridItem>
+					</mx:GridRow>
+					<mx:GridRow>
+						<mx:GridItem>
+							<mx:Text styleName="texteCorps" text="La demi-journée pour 15-30 enfants"/>
+						</mx:GridItem>
+						<mx:GridItem>
+							<mx:Text styleName="texteCorps" text="105€"/>
+						</mx:GridItem>
+					</mx:GridRow>
+					<mx:GridRow>
+						<mx:GridItem>
+							<mx:Text styleName="texteCorps" text="Par enfant supplémentaire"/>
+						</mx:GridItem>
+						<mx:GridItem>
+							<mx:Text styleName="texteCorps" text="3€"/>
+						</mx:GridItem>
+					</mx:GridRow>
+					<mx:GridRow>
+						<mx:GridItem>
+							<mx:Text styleName="texteCorps" text="La journée pour 15-30 enfants"/>
+						</mx:GridItem>
+						<mx:GridItem>
+							<mx:Text styleName="texteCorps" text="180€"/>
+						</mx:GridItem>
+					</mx:GridRow>
+					<mx:GridRow>
+						<mx:GridItem>
+							<mx:Text styleName="texteCorps" text="Par enfant supplémentaire"/>
+						</mx:GridItem>
+						<mx:GridItem>
+							<mx:Text styleName="texteCorps" text="5€"/>
+						</mx:GridItem>
+					</mx:GridRow>
+				</mx:Grid>
+				<mx:Text styleName="texteCorps" width="100%">
+					<mx:htmlText>
+						<![CDATA[	Labellisé Ferme Pédagogique depuis 2011, notre prestation se déroule par une visite de découverte de l’élevage suivi de différents ateliers adaptés au cycle tels que :
+
+	- Collage de laine sur dessin lama.
+	- Atelier Amérique du Sud.					
+	- Les principes de la rumination avec maquette.
+	-  La laine dans tous ses états, de la tonte au filage (travaux pratiques).
+	- Naissance d’un lama.
+	- Les herbes prairiales.
+
+	Nous contacter pour tout aménagement
+	(tél. 05 57 42 20 61).
+	
+	<font size="15">Télechargez la
+<u><b><a href="../assets/fichepedagogique.pdf" target="_blank">fiche pédagogique au format pdf</a></b></u></font>
+
+	]]>
+					</mx:htmlText>
+				</mx:Text>
+			</mx:VBox>
+				
+			<mx:VBox width="100%" horizontalAlign="center">
+				<mx:HBox>
+					<mx:VBox>
+						<tools:SmoothImageCanvas width="175" height="135"
+							backgroundColor="#FFFFFF" epaisseur="4"
+							source="../assets/IMG_3058.JPG"
+							urlMediaFullScreen="../assets/IMG_3058.JPG"/>
+					</mx:VBox>
+					<mx:VBox>
+						<tools:SmoothImageCanvas width="175" height="135"
+							backgroundColor="#FFFFFF" epaisseur="4"
+							source="../assets/IMG_3343.JPG"
+							urlMediaFullScreen="../assets/IMG_3343.JPG"/>
+					</mx:VBox>
+					<mx:VBox>
+						<tools:SmoothImageCanvas width="175" height="135"
+							backgroundColor="#FFFFFF" epaisseur="4"
+							source="../assets/IMG_3347.JPG"
+							urlMediaFullScreen="../assets/IMG_3347.JPG"/>
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox>
+					<mx:VBox>
+						<tools:SmoothImageCanvas width="175" height="135"
+							backgroundColor="#FFFFFF" epaisseur="4"
+							source="../assets/Collage laine 001.jpg"
+							urlMediaFullScreen="../assets/Collage laine 001.jpg"/>
+					</mx:VBox>
+					<mx:VBox>
+						<tools:SmoothImageCanvas width="175" height="135"
+							backgroundColor="#FFFFFF" epaisseur="4"
+							source="../assets/IMG_3351.JPG"
+							urlMediaFullScreen="../assets/IMG_3437.JPG"/>
+					</mx:VBox>
+					<mx:VBox>
+						<tools:SmoothImageCanvas width="175" height="135"
+							backgroundColor="#FFFFFF" epaisseur="4"
+							source="../assets/IMG_3437.JPG"
+							urlMediaFullScreen="../assets/IMG_3437.JPG"/>
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox>
+					<mx:VBox>
+						<tools:SmoothImageCanvas width="175" height="135"
+							backgroundColor="#FFFFFF" epaisseur="4"
+							source="../assets/Atelier laine.JPG"
+							urlMediaFullScreen="../assets/Atelier laine.JPG"/>
+					</mx:VBox>
+					<mx:VBox>
+						<tools:SmoothImageCanvas width="175" height="135"
+							backgroundColor="#FFFFFF" epaisseur="4"
+							source="../assets/les herbes prairiales.JPG"
+							urlMediaFullScreen="../assets/les herbes prairiales.JPG"/>
+					</mx:VBox>
+					<mx:VBox>
+						<tools:SmoothImageCanvas width="175" height="135"
+							backgroundColor="#FFFFFF" epaisseur="4"
+							source="../assets/Rumination.JPG"
+							urlMediaFullScreen="../assets/Rumination.JPG"/>
+					</mx:VBox>
+				</mx:HBox>
+			</mx:VBox>
+		</mx:HBox>
+
+
+		<mx:Text styleName="texteEdito" text="RENSEIGNEMENTS COMPLEMENTAIRES"/>
+		<mx:HBox width="100%">
+			<mx:VBox>
+				<tools:SmoothImageCanvas width="175" height="135"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/espace-conference.jpg"
+					urlMediaFullScreen="../assets/espace-conference.jpg"/>
+				<mx:Text styleName="texteLegende" text="Espace de conférences en sous-bois" width="175"/>
+				<tools:SmoothImageCanvas width="175" height="135"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/Espace pique-nique 2.JPG"
+					urlMediaFullScreen="../assets/Espace pique-nique 2.JPG"/>
+				<mx:Text styleName="texteLegende" text="Espace pour le pique-nique en sous-bois" width="175"/>
+			</mx:VBox>
+
+			<mx:VBox width="100%">
+				<mx:Text styleName="texteCorps" width="100%">
+					<mx:htmlText>
+						<![CDATA[<u><b>Activité de l’élevage</b></u>
+ - Production et vente de crias de qualité (petits lamas); le tronc commun des contraintes reste le même que tous autres élevage classique.
+ - Désireux d’être acteur dans le développement durable, nous avons choisi le lama pour ses qualités de débroussailleur et de gardien de troupeau et en avons fait nos spécialités.
+
+<u><b>La Ferme</b></u>
+Ferme Girondine avec ses prairies au coeur du vignoble de la Haute Gironde.
+
+<u><b>Accueil</b></u>
+Parking pour bus. 
+Un espace d’accueil et exposition.
+Aire de pique-nique en sous-bois  dans le parc des lamas (gratuit, avant, pendant ou après la visite)
+
+<u><b>Taille des groupes</b></u>
+30 personnes, se renseigner jusqu’à 50 personnes.
+
+<u><b>Localisation</b></u>
+A 7 km de Blaye et à 3 km à l’Est du bourg  Saint Paul.
+Venant de Saint André de Cubzac en direction de Saintes par la RD 937 (anciennement RN 137), suivant les fléchages Les Lamas de Brandacot, au niveau de Saint Paul, tourner à droite sur la D 737, direction La Grela, tourner à gauche à Poncla. Puis  prendre la 1ère à droite.  
+
+<u><b>Recommandation en période humide</b></u>
+Lors de la visite,  l’éleveur vous conduira sur les territoires des lamas, il est conseillé de s’équiper de chaussures et vêtements appropriés. 
+
+
+<b><u><font size="15"><a href="../assets/plan.gif" target="_blank">Télécharger le plan</a></font></u></b>
+						]]>
+					</mx:htmlText>
+				</mx:Text>
+				<tools:SmoothImageCanvas width="450" height="250"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/plan.gif"
+					urlMediaFullScreen="../assets/plan.gif"/>
+				<mx:Text styleName="texteLegende" text="		Circuit préconisé pour les bus, balisé par signalétique." width="315"/>
+
+			</mx:VBox>
+			
+		</mx:HBox>
+		<mx:Spacer height="50"/>
+		
+
+	</mx:VBox>
+	
+	
+	
+</mx:VBox>

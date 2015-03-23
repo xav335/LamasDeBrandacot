@@ -1,0 +1,288 @@
+/* CSS file */
+.texteEntrez {
+   color: #eac473;
+   letterSpacing: 10;
+   fontFamily: trajan;
+   fontSize: 18;
+}
+
+.texteAccueil{
+   color: #FFFFFF;
+   fontFamily: Verdana;
+   fontSize: 12;
+}
+
+.texteChambresDHote{
+   color: #FEFEFE;
+   letterSpacing: 6;
+   fontFamily: trajan;
+   fontSize: 18;
+}
+.texteChateauMontjouan{
+   color: #FFFFFF;
+   fontFamily: sloop;
+   fontSize: 82;
+}
+.texteBordeaux{
+   color: #FFFFFF;
+   letterSpacing: 8;
+   fontFamily: trajan;
+   fontSize: 12;
+}
+
+.texteChambresDHoteContact{
+   color: #91835C;
+   letterSpacing: 4;
+   fontFamily: trajan;
+   fontSize: 12;
+}
+.texteChateauMontjouanContact{
+   color: #91835C;
+   fontFamily: sloop;
+   fontSize: 55;
+}
+.texteBordeauxContact{
+   color: #91835C;
+   letterSpacing: 5;
+   fontFamily: trajan;
+   fontSize: 8;
+}
+
+.texteChambresDHoteDore{
+   color: #AD9964;
+   letterSpacing: 6;
+   fontFamily: trajan;
+   fontSize: 18;
+}
+.texteChateauMontjouanDore{
+   color: #AD9964;
+   fontFamily: sloop;
+   fontSize: 82;
+}
+.texteBordeauxDore{
+   color: #AD9964;
+   letterSpacing: 8;
+   fontFamily: trajan;
+   fontSize: 12;
+}
+
+.texteBouton{
+   color: #8E7B55;
+   fontFamily: trajan;
+   fontSize: 13;
+}
+.texteBoutonRollOver{
+   color: #EEBC51;
+   fontFamily: trajan;
+   fontSize: 13;
+}
+
+.texteBoutonMentions{
+   color: #A09A90;
+   fontFamily: trajan;
+   fontSize: 9;
+}
+.texteBoutonMentionsRollOver{
+   color: #B3ACA1;
+   fontFamily: trajan;
+   fontSize: 9;
+}
+
+.texteBoutonRetour{
+   color: #0B0905;
+   fontFamily: times;
+   fontSize: 14;
+}
+
+.texteBoutonSon{
+   color: #B1B1B1;
+   fontFamily: times;
+   fontSize: 10;
+}
+
+.titreContact{
+   color: #000000;
+   fontFamily: trajan;
+   fontSize: 20;
+   letter-spacing: 7;
+}
+
+.ssTitreContact{
+   color: #B3A88D;
+   fontFamily: arial;
+   fontSize: 14;
+   font-weight: bold;
+}
+.texteContact{
+   color: #6F7072;
+   fontFamily: times;
+   fontSize: 14;
+}
+
+.texteAdresse1{
+   color: #B3A88D;
+   fontFamily: lucida;
+   fontSize: 16;
+}
+.texteAdresse2{
+   color: #B3A88D;
+   fontFamily: lucida;
+   fontSize: 14;
+}
+
+.texteBoutonContact{
+   color: #FFFFFF;
+   fontFamily: lucida;
+   fontSize: 12;
+}
+
+.texteEquipement{
+   color: #000000;
+   fontFamily: times;
+   fontSize: 14;
+}
+
+IndicationTextInput{
+   color: #939393;
+   fontFamily: arial;
+   fontSize: 12;
+   fontWeight: bold;
+   borderStyle: solid;
+   borderColor: #636362;
+   backgroundAlpha: 0;
+   cornerRadius: 7;
+   theme-color: #D9C190;
+}
+IndicationTextArea{
+   color: #939393;
+   fontFamily: arial;
+   fontSize: 12;
+   fontWeight: bold;
+   borderStyle: solid;
+   borderColor: #636362;
+   backgroundAlpha: 0;
+   cornerRadius: 7;
+   theme-color: #D9C190;
+}
+
+.panelBouton {
+   border-thickness-bottom: 0;
+   borderStyle: solid;
+   borderAlpha: 0;
+   borderThickness: 0;
+   roundedBottomCorners: true;
+   headerHeight: 0;
+   backgroundColor: #b3a98d;
+   dropShadowEnabled: false;
+}
+
+TileList {
+	background-alpha: 0;
+	rollOverColor: #B08800;
+	selectionColor: #CC9E00;
+	
+}
+
+VScrollBar {
+	horizontal-align: left;
+    downArrowUpSkin: Embed(source="../assets/downArrow.png");
+    downArrowOverSkin: Embed(source="../assets/downArrow.png");
+    downArrowDownSkin: Embed(source="../assets/downArrow.png");
+    upArrowUpSkin: Embed(source="../assets/upArrow.png");
+    upArrowOverSkin: Embed(source="../assets/upArrow.png");
+    upArrowDownSkin: Embed(source="../assets/upArrow.png");
+    thumbDownSkin: 
+        Embed(source="../assets/thumb.png",
+        scaleGridLeft="7", scaleGridTop="5", 
+        scaleGridRight="8", scaleGridBottom="7");
+        
+    thumbUpSkin: 
+        Embed(source="../assets/thumb.png",
+        scaleGridLeft="7", scaleGridTop="5", 
+        scaleGridRight="8", scaleGridBottom="7");
+        
+    thumbOverSkin: 
+        Embed(source="../assets/thumb.png",
+        scaleGridLeft="7", scaleGridTop="5", 
+        scaleGridRight="8", scaleGridBottom="7");
+        
+    trackSkin: 
+        Embed(source="../assets/scrolltrack.png",
+        scaleGridLeft="7", scaleGridTop="4", 
+        scaleGridRight="8", scaleGridBottom="6" );       
+}
+
+.vScrollBarDiscret {
+	horizontal-align: left;
+    downArrowUpSkin: Embed(source="../assets/downArrow.png");
+    downArrowOverSkin: Embed(source="../assets/downArrow.png");
+    downArrowDownSkin: Embed(source="../assets/downArrow.png");
+    upArrowUpSkin: Embed(source="../assets/upArrow.png");
+    upArrowOverSkin: Embed(source="../assets/upArrow.png");
+    upArrowDownSkin: Embed(source="../assets/upArrow.png");
+    thumbDownSkin: 
+        Embed(source="../assets/thumb.png",
+        scaleGridLeft="7", scaleGridTop="5", 
+        scaleGridRight="8", scaleGridBottom="7");
+        
+    thumbUpSkin: 
+        Embed(source="../assets/thumb.png",
+        scaleGridLeft="7", scaleGridTop="5", 
+        scaleGridRight="8", scaleGridBottom="7");
+        
+    thumbOverSkin: 
+        Embed(source="../assets/thumb.png",
+        scaleGridLeft="7", scaleGridTop="5", 
+        scaleGridRight="8", scaleGridBottom="7");
+        
+    trackSkin: 
+        Embed(source="../assets/scrolltrack.png",
+        scaleGridLeft="7", scaleGridTop="4", 
+        scaleGridRight="8", scaleGridBottom="6" );       
+}
+
+.titreMenuOff{
+   color: #344555;
+   fontFamily: cafeta;
+   fontSize: 48;
+}
+.titreMenuOn{
+   color: #FFC601;
+   fontFamily: cafeta;
+   fontSize: 48;
+}
+.sousTitreMenu{
+   color: #FFFFFF;
+   fontFamily: cafeta;
+   fontSize: 18;
+}
+.exposant{
+   color: #FFFFFF;
+   fontFamily: cafeta;
+   fontSize: 8;
+}
+
+.titreParagraphe{
+   color: #FFC601;
+   fontFamily: cafeta;
+   fontSize: 48;
+}
+.sousTitreParagraphe{
+   color: #FFC601;
+   fontFamily: cafeta;
+   fontSize: 36;
+}
+
+.titreActu{
+   color: #FFFFFF;
+   fontFamily: tahoma;
+   fontSize: 11;
+   font-weight: bold;
+}
+.corps{
+   color: #3D5266;
+   fontFamily: tahoma;
+   fontSize: 11;
+}
+
+

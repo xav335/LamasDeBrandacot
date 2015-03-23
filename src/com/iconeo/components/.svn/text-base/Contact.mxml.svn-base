@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:components="com.iconeo.components.*" xmlns:tools="com.iconeo.tools.*">
+	<mx:Script>
+		<![CDATA[
+			import flash.net.navigateToURL;
+		]]>
+	</mx:Script>
+	<mx:VBox horizontalAlign="center">
+		<mx:Text styleName="texteMenu"
+			text="NOS COORDONNÉES"/>
+		<mx:Text styleName="texteCorps">
+			<mx:htmlText>
+				<![CDATA[<b>Les Lamas de Brandacot</b>
+				
+Florence et Joël PLANTEUR
+3 Les bois de Lafont
+33390 SAINT-PAUL
+
+Tél. 05 57 42 20 61
+Mobile : 06 20 89 70 15
+Blog : <a href="http://lamadebrandacot.skyblog.com">http://lamadebrandacot.skyblog.com</a>]]>
+			</mx:htmlText>
+		</mx:Text>
+		
+		<mx:Spacer height="20"/>
+		
+		<mx:Text styleName="texteMenu"
+			text="NOUS TROUVER"/>
+		<!--tools:SmoothImageCanvas width="450" height="250"
+			backgroundColor="#FFFFFF" epaisseur="4"
+			source="../assets/plan.gif"
+			urlMediaFullScreen="../assets/plan.gif"/-->
+
+		<mx:Image source="../assets/miniplan.jpg"
+			click="navigateToURL(new URLRequest('http://goo.gl/maps/Zb4j'));"
+			useHandCursor="true" buttonMode="true" mouseChildren="false"/>
+	</mx:VBox>
+	
+	<mx:Spacer width="50"/>
+	
+	<mx:VBox backgroundColor="#000000" backgroundAlpha=".5">
+		<mx:Text styleName="texteMenu"
+			text="FORMULAIRE DE CONTACT"/>
+		<mx:Text styleName="texteCorps"
+			text="Merci de bien vouloir remplir ce formulaire afin de nous faire part de vos demandes."/>
+			
+		<components:FormulaireContact width="405"/>
+	</mx:VBox>
+
+	
+</mx:HBox>

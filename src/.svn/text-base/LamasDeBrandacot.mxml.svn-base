@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+	historyManagementEnabled="false"
+	layout="absolute" backgroundColor="#614B3A"
+	horizontalScrollPolicy="off" verticalScrollPolicy="auto"
+	scroll="handleScroll(event)" verticalLineScrollSize="50"
+	creationComplete="refresh(event)" resize="refresh(event)" xmlns:local="*" xmlns:components="com.iconeo.components.*" xmlns:ns1="com.iconeo.tools.*">
+	<mx:AnimateProperty id="deplacementAscenseur"
+		target="{this}" property="verticalScrollPosition"
+		easingFunction="{Quadratic.easeInOut}"/>
+		
+	<mx:Image source="../assets/fond.jpg" x="{(width-1200)/2}"/>
+	
+	<local:BodyLamasDeBrandacot id="body" creationComplete="connecterEcouteurs()" x="{(width-1200)/2}"/>
+	<mx:Fade id="cacher" alphaFrom="1" alphaTo="0" duration="500"/>
+	<mx:Fade id="montrer" alphaFrom="0" alphaTo="1" duration="500"/>
+	<mx:Style source="LamasDeBrandacot.css"/>
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.managers.ToolTipManager;
+			import mx.effects.easing.Quadratic;
+			import mx.events.ScrollEvent;
+			import com.iconeo.tools.VisuMediaSingleton;
+			import mx.events.ListEvent;
+			import mx.events.ItemClickEvent;
+
+			[Embed(source="../assets/ttf/PhontPhreaks Handwriting.ttf", fontName="pph")]
+			private var _pph:Class;
+
+			[Embed(source="../assets/ttf/HELVETIN.TTF", fontName="helvet")]
+			private var _helvet:Class;
+
+			[Embed(source="../assets/ttf/HELVENCB.TTF", fontName="helvetBold")]
+			private var _helvetBold:Class;
+
+
+			private function connecterEcouteurs():void {
+				
+				var visuMedia:VisuMediaSingleton = VisuMediaSingleton.instance;
+				VisuMediaSingleton.instance.visible = false;
+				addChild(VisuMediaSingleton.instance);
+				VisuMediaSingleton.instance.setStyle("showEffect", "montrer");
+				VisuMediaSingleton.instance.setStyle("hideEffect", "cacher");
+			}
+
+			public function refresh(e:Event = null):void{
+				ToolTipManager.showDelay = 0;
+
+				if(body != null){
+					body.x = (application.width-body.width)/2;
+				}
+
+				if(VisuMediaSingleton.instance != null){
+					VisuMediaSingleton.instance.width = application.width;
+					VisuMediaSingleton.instance.height = application.height;
+				}
+			}
+			
+			private function handleScroll(e:ScrollEvent = null):void{
+				VisuMediaSingleton.instance.y = (e.position >=0)?e.position:0;
+			}
+
+		]]>
+	</mx:Script>
+
+</mx:Application>

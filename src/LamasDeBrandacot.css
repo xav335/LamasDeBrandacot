@@ -1,0 +1,103 @@
+Application {
+   themeColor: #614b3a;
+}
+
+.texteMenu{
+   color: #FFFFFF;
+   fontFamily: pph;
+   fontSize: 36;
+}
+
+.texteMenuSelec{
+   color: #FFD500;
+   fontFamily: pph;
+   fontSize: 36;
+}
+
+.texteTitre{
+   color: #FFFFFF;
+   fontFamily: pph;
+   fontSize: 72;
+}
+
+.texteEdito{
+   color: #FFFFFF;
+   fontFamily: pph;
+   fontSize: 29;
+   text-align: right;
+}
+
+.texteCorpsSelec{
+   color: #FFD500;
+   fontFamily: Verdana;
+   fontSize: 12;
+}
+
+.texteCorps{
+   color: #FFFFFF;
+   fontFamily: Verdana;
+   fontSize: 12;
+}
+
+.texteLegende{
+   color: #FFFFFF;
+   fontFamily: Verdana;
+   font-style: italic;
+   fontSize: 10;
+   text-align: center;
+}
+
+IndicationTextInput{
+   color: #FFFFFF;
+   fontFamily: arial;
+   fontSize: 12;
+   borderStyle: solid;
+   borderColor: #636362;
+   backgroundAlpha: 0;
+   cornerRadius: 7;
+   theme-color: #FFD500;
+}
+IndicationTextArea{
+   color: #FFFFFF;
+   fontFamily: arial;
+   fontSize: 12;
+   borderStyle: solid;
+   borderColor: #636362;
+   backgroundAlpha: 0;
+   cornerRadius: 7;
+   theme-color: #FFD500;
+}
+
+.panelNoir {
+   borderStyle: solid;
+   cornerRadius: 7;
+   dropShadowEnabled: false;
+   backgroundColor: #000000;
+   titleStyleName: "texteCorps";
+}
+
+Grid{
+	horizontal-gap: 0;
+	vertical-gap: 0;
+	border-sides: bottom;
+	border-color: #FFFFFF;
+	border-thickness: 2;
+	border-style: solid;
+}
+
+GridRow{
+	border-sides: right;
+	border-color: #FFFFFF;
+	border-thickness: 2;
+	border-style: solid;
+}
+
+GridItem{
+	border-sides: "left top";
+	border-color: #FFFFFF;
+	border-thickness: 2;
+	border-style: solid;
+	text-align: center;
+	horizontal-align: center;
+	vertical-align: middle;
+}

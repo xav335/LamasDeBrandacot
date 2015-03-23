@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml"
+	width="1200" height="100%"
+	verticalScrollPolicy="off"
+	verticalGap="0" xmlns:components="com.iconeo.components.*"
+	horizontalAlign="center" xmlns:tools="com.iconeo.tools.*"
+	backgroundColor="#624B3B" xmlns:controls="com.fxcomponents.controls.*">
+	<mx:VBox width="900">
+		
+		<mx:Spacer height="50"/>
+		
+		<mx:HBox width="100%">
+			<mx:VBox width="100%">
+				<mx:Text styleName="texteEdito" text="LA FERME"/>
+				<mx:HBox width="100%">
+					<mx:Image source="../assets/logo-bienvenue.png"/>
+					<mx:Text styleName="texteCorps" width="363">
+						<mx:htmlText>
+							<![CDATA[L’Elevage à l’enseigne « <i><b>Les Lamas de Brandacot</b></i> » se compose d’une vingtaine de lamas sur une propriété de douze hectares de bois et de prairies. Située en Haute Gironde, commune de SAINT PAUL, la ferme est au coeur des vignes  à 7 km de BLAYE.  Joël et Florence s’y délectent depuis 1998  à la production de crias (petits lamas).
+	Si les fonctions du lama sont multiples,  notre élevage à pour activité :
+		
+	-<b>  La production et vente de lamas</b>
+	-<b>  Le lama gardien de troupeau</b> (notre spécialité)
+	-<b>  Visites guidées de la ferme.</b> Notre élevage agréé Ferme de Découverte et Ferme Pédagogique est ouvert au grand public, groupes divers, scolaires et centres de loisirs.
+	-<b>  La location de lamas pour le débroussaillement en entreprise.</b>
+		
+							]]>
+						</mx:htmlText>
+					</mx:Text>
+				</mx:HBox>
+			</mx:VBox>
+			
+			<mx:VBox>
+				<tools:SmoothImageCanvas width="175" height="135"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/jeunes lamas.JPG"
+					urlMediaFullScreen="../assets/jeunes lamas.JPG"/>
+				<mx:Text styleName="texteLegende" text="Jeunes lamas" width="175"/>
+				<tools:SmoothImageCanvas width="175" height="135"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/cheyenne 2.jpg"
+					urlMediaFullScreen="../assets/cheyenne 2.jpg"/>
+				<mx:Text styleName="texteLegende" text="Cheyenne" width="175"/>
+			</mx:VBox>
+			<mx:VBox>
+				<tools:SmoothImageCanvas width="175" height="135"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/photo grand public.JPG"
+					urlMediaFullScreen="../assets/photo grand public.JPG"/>
+				<mx:Text styleName="texteLegende" text="Grand public" width="175"/>
+				<tools:SmoothImageCanvas width="175" height="135"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/debroussaillement.jpg"
+					urlMediaFullScreen="../assets/debroussaillement.jpg"/>
+				<mx:Text styleName="texteLegende" text="Lamas sur site de débroussaillement" width="175"/>
+			</mx:VBox>
+		</mx:HBox>
+		<mx:Spacer height="20"/>
+		
+		<mx:HBox width="100%" horizontalAlign="center">
+				<tools:SmoothImageCanvas width="428" height="241"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/vignette_123Intro.jpg"
+					urlMediaFullScreen="http://www.elevagelama.com/assets/123Intro.flv"/>
+				<tools:SmoothImageCanvas width="428" height="241"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/vignette_678dernier.jpg"
+					urlMediaFullScreen="http://www.elevagelama.com/assets/678dernier.flv"/>
+		</mx:HBox>
+
+		<mx:Spacer height="50"/>
+		<mx:HBox width="100%">
+			<mx:VBox>
+				<tools:SmoothImageCanvas width="175" height="135"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/blue garou.jpg"
+					urlMediaFullScreen="../assets/blue garou.jpg"/>
+				<mx:Text styleName="texteLegende" text="Blue Garou" width="175"/>
+				<tools:SmoothImageCanvas width="175" height="135"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/lilly.jpg"
+					urlMediaFullScreen="../assets/lilly.jpg"/>
+				<mx:Text styleName="texteLegende" text="Lilly primée" width="175"/>
+				<tools:SmoothImageCanvas width="175" height="135"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/mere-fils.jpg"
+					urlMediaFullScreen="../assets/mere-fils.jpg"/>
+				<mx:Text styleName="texteLegende" text="Mère et fils" width="175"/>
+			</mx:VBox>
+			<mx:VBox>
+				<tools:SmoothImageCanvas width="175" height="135"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/kheops.jpg"
+					urlMediaFullScreen="../assets/kheops.jpg"/>
+				<mx:Text styleName="texteLegende" text="Kheops" width="175"/>
+				<tools:SmoothImageCanvas width="175" height="135"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/saba championne.jpg"
+					urlMediaFullScreen="../assets/saba championne.jpg"/>
+				<mx:Text styleName="texteLegende" text="Saba championne" width="175"/>
+			</mx:VBox>
+
+			<mx:VBox width="100%">
+				<mx:Text styleName="texteEdito" text="NOTRE ELEVAGE"/>
+				<mx:Text styleName="texteCorps" width="100%">
+					<mx:htmlText>
+						<![CDATA[
+En 1997,  deux lamas castrés  ont été les précurseurs de notre passion. Dans le même temps, Joël passionné des petits camélidés s’investit dans l’association Alpagas et Lamas de France (aujourd’hui dissoute) en qualité de secrétaire. Durant 15 ans, là au travers de son relationnel avec les éleveurs professionnels il acquiert une connaissance sur ces tylopodes  méconnus du grand public.
+Aujourd’hui le troupeau est constitué de lamas pour la plupart sélectionnés comprenant des femelles gestantes et allaitantes avec leur petits et trois mâles reproducteurs.						
+Présentés en concours européens, certains de nos animaux sont primés en modèle et allure, parmi eux : 
+Tous nos lamas sont identifiés par puce électronique et enregistrés soit au fichier national des petits camélidés, soit au fichier Européen « Lareu ».
+Le suivi sanitaire reste de rigueur  au sein de l’élevage et nous nous donnons la volonté de manipuler tous nos lamas pour être conduits en longe.
+
+						]]>
+					</mx:htmlText>
+				</mx:Text>
+			</mx:VBox>
+			
+		</mx:HBox>
+		
+		<mx:VBox width="100%">
+			<mx:Text styleName="texteEdito" text="LES MEDIAS EN PARLENT!"/>
+			<mx:Text styleName="texteCorps" width="100%">
+				<mx:htmlText>
+					<![CDATA[-  L’an 2000, lors du concours Européen des lamas et Alpagas à Rambouillet, Joël remporte avec un de ses lamas le 1er prix de randonnée, acclamé par le public il est nommé « l’homme qui murmure aux oreilles des lamas » par le juge américain – article publié sur le journal « le Léopard » de la Légion de Gendarmerie d’Aquitaine.  
+-  Spécialisé dans la pratique du lama gardien de troupeau, deux articles fournis par nos soins ont été proposés et diffusés par l’Alliance Pastorale sur leurs bulletins mensuels.
+-  Plusieurs articles sur notre élevage et notre activité de location de lamas en entreprise pour le débroussaillement, parus sur  les journaux locaux Sud-Ouest et Haute-Gironde.
+-  2007, émission télévisée par FR3 sur notre élevage.
+-  Octobre 2009, lors du salon européen des lamas et alpagas à Pompadour (Corrèze) deux femelles lamas de notre élevage, Saba et Tanagra remportent successivement les titres de « Grande Championne » et 3ème prix  dans leur catégorie de femelles moyennement lainées. Résultats publiés sur plusieurs journaux locaux. 
+-  Mars 2010, diffusion d’un court métrage par 30 Millions d’Amis sur notre spécialité de Lama Gardien de Troupeau avec décoration du lama Eros  pour ses états de services exemplaires.
+-  Octobre2011, diffusion d’un court métrage sur notre spécialité de « Lama gardien de troupeau » par Direct 8, les animaux de la 8.
+  
+]]>
+				</mx:htmlText>
+			</mx:Text>
+			
+		
+		</mx:VBox>
+		
+		<mx:VBox width="100%" horizontalAlign="center">
+			<mx:Spacer height="20"/>	
+				<tools:SmoothImageCanvas width="428" height="241"
+					backgroundColor="#FFFFFF" epaisseur="4"
+					source="../assets/vignette_10ErosMedaille.jpg"
+					urlMediaFullScreen="http://www.elevagelama.com/assets/10ErosMedaille.flv"/>
+			<mx:Spacer height="20"/>
+		</mx:VBox>
+		
+		<mx:VBox width="100%" horizontalAlign="center">
+			<mx:HBox>
+				<mx:VBox>
+					<tools:SmoothImageCanvas width="175" height="135"
+						backgroundColor="#FFFFFF" epaisseur="4"
+						source="../assets/Article sud ouest.jpg"
+						urlMediaFullScreen="../assets/Article sud ouest.jpg"/>
+					<mx:Text styleName="texteLegende" text="Article Sud Ouest 29/10/2011" width="175"/>
+				</mx:VBox>
+				<mx:VBox>
+					<tools:SmoothImageCanvas width="175" height="135"
+						backgroundColor="#FFFFFF" epaisseur="4"
+						source="../assets/article 30 millions d'amis.jpg"
+						urlMediaFullScreen="../assets/article 30 millions d'amis.jpg"/>
+					<mx:Text styleName="texteLegende" text="Article 30 millions d'amis" width="175"/>
+				</mx:VBox>
+				<mx:VBox>
+					<tools:SmoothImageCanvas width="175" height="135"
+						backgroundColor="#FFFFFF" epaisseur="4"
+						source="../assets/article Haute Gironde n1.jpg"
+						urlMediaFullScreen="../assets/article Haute Gironde n1.jpg"/>
+					<mx:Text styleName="texteLegende" text="article Haute Gironde n°1" width="175"/>
+				</mx:VBox>
+				<mx:VBox>
+					<tools:SmoothImageCanvas width="175" height="135"
+						backgroundColor="#FFFFFF" epaisseur="4"
+						source="../assets/article Haute Gironde.jpg"
+						urlMediaFullScreen="../assets/article Haute Gironde.jpg"/>
+					<mx:Text styleName="texteLegende" text="Article Haute Gironde" width="175"/>
+				</mx:VBox>
+			</mx:HBox>
+			<mx:HBox>
+				<mx:VBox>
+					<tools:SmoothImageCanvas width="175" height="135"
+						backgroundColor="#FFFFFF" epaisseur="4"
+						source="../assets/Article Alliance Pastorale.jpg"
+						urlMediaFullScreen="../assets/Article Alliance Pastorale.jpg"/>
+					<mx:Text styleName="texteLegende" text="Article Alliance Pastorale" width="175"/>
+				</mx:VBox>
+				<mx:VBox>
+					<tools:SmoothImageCanvas width="175" height="135"
+						backgroundColor="#FFFFFF" epaisseur="4"
+						source="../assets/article Sud-Ouest n1.jpg"
+						urlMediaFullScreen="../assets/article Sud-Ouest n1.jpg"/>
+					<mx:Text styleName="texteLegende" text="Article Sud-Ouest n°1" width="175"/>
+				</mx:VBox>
+				<mx:VBox>
+					<tools:SmoothImageCanvas width="175" height="135"
+						backgroundColor="#FFFFFF" epaisseur="4"
+						source="../assets/article Sud-ouest.jpg"
+						urlMediaFullScreen="../assets/article Sud-ouest.jpg"/>
+					<mx:Text styleName="texteLegende" text="Article Sud-Ouest" width="175"/>
+				</mx:VBox>
+			</mx:HBox>
+		</mx:VBox>
+	
+		<mx:Spacer height="50"/>
+		
+
+	</mx:VBox>
+	
+	
+	
+</mx:VBox>

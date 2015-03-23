@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:utils="flash.utils.*">
+	
+	<mx:Image id="image" visible="true"
+		showEffect="montrer" hideEffect="cacher"/>
+	<mx:Image id="imageBis" visible="false"
+		showEffect="montrer" hideEffect="cacher"/>
+	
+	<mx:Fade id="cacher" alphaFrom="1" alphaTo="0"/>
+	<mx:Fade id="montrer" alphaFrom="0" alphaTo="1"/>
+	
+	<mx:Script>
+		<![CDATA[
+			private var flag:Boolean = false;
+			private var index:int = 0;
+			private var _listeImage:Array;
+
+			private var timer:Timer = new Timer(3000, 0);			
+
+			public function set listeImage(listeImage:Array):void {
+				_listeImage = listeImage;
+				timer.addEventListener(TimerEvent.TIMER, handleTimer);
+				timer.start();
+				
+				image.source = listeImage[index];
+			}
+			
+			private function handleTimer(e:TimerEvent):void {
+				index = (index +1)%_listeImage.length;
+				flag = !flag;
+				if(flag){
+					imageBis.source = _listeImage[index];
+					image.visible = false;
+					imageBis.visible = true;
+				} else {
+					image.source = _listeImage[index];
+					image.visible = true;
+					imageBis.visible = false;
+				}
+			}
+			
+		]]>
+	</mx:Script>
+</mx:Canvas>

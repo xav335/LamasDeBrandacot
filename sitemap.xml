@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns="http://www.google.com/schemas/sitemap/0.84"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.google.com/schemas/sitemap/0.84
+http://www.google.com/schemas/sitemap/0.84/sitemap.xsd">
+<url>
+<loc>http://www.elevagelama.com/index.html</loc>
+</url>
+<url>
+<loc>http://www.elevagelama.com/accueil.html</loc>
+</url>
+<url>
+<loc>http://www.elevagelama.com/contact.html</loc>
+</url>
+<url>
+<loc>http://www.elevagelama.com/laferme.html</loc>
+</url>
+<url>
+<loc>http://www.elevagelama.com/lelama.html</loc>
+</url>
+<url>
+<loc>http://www.elevagelama.com/lamasenvente.php</loc>
+</url>
+<url>
+<loc>http://www.elevagelama.com/gardiensdetroupeaux.html</loc>
+</url>
+<url>
+<loc>http://www.elevagelama.com/partenaires.html</loc>
+</url>
+<url>
+<loc>http://www.elevagelama.com/visitesguidees.html</loc>
+</url>
+<url>
+<loc>http://www.elevagelama.com/mentionsLegales.html</loc>
+</url>
+</urlset>
